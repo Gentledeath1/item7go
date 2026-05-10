@@ -35,13 +35,14 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex flex-col leading-none group">
-          <span className="font-heading text-2xl font-900 text-brand-red tracking-tight group-hover:text-brand-red transition-colors duration-300">
-            item<span className="text-brand-gold">7</span> 
-          </span>
-          <span className="text-[15px] tracking-widest text-brand-dark  font-body font-500">
-            go
-          </span>
+        <Link to="/" className="flex items-center">
+          <div className="h-[24px] w-[84px] overflow-hidden rounded">
+            <img
+              src="/images/logo.jpg"
+              alt="Item 7 Go"
+              className="h-[100%] w-[100%] object-cover"
+            />
+          </div>
         </Link>
 
         {/* Desktop Nav */}

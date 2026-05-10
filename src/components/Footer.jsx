@@ -47,13 +47,14 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* Brand Column */}
         <div className="md:col-span-2">
-          <Link to="/" className="flex flex-col leading-none mb-6">
-            <span className="font-heading text-3xl font-bold text-brand-red tracking-tight">
-              item<span className="text-brand-gold">7</span>
-            </span>
-            <span className="text-[15px] tracking-widest text-brand-offwhite ">
-              go
-            </span>
+          <Link to="/" className="flex items-center">
+            <div className="h-[40px] w-[88px] bg-brand-dark mb-3 overflow-hidden rounded">
+              <img
+                src="/images/logo.jpg"
+                alt="Item 7 Go"
+                className="h-[100%] w-[120%] object-cover object-left"
+              />
+            </div>
           </Link>
           <p className="text-sm leading-relaxed text-brand-cream/50 max-w-xs">
             Fast. Fresh. Uncompromising. Ibadan's go-to spot for shawarma,
