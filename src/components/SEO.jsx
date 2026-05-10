@@ -1,24 +1,22 @@
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from "react-helmet-async";
 
-const SITE_URL = 'https://item7go-rho.vercel.app'
-const SITE_NAME = 'Item 7 Go'
-const DEFAULT_IMAGE = `${SITE_URL}/images/logo.jpg`
+const SITE_URL = "https://item7go-rho.vercel.app";
+const SITE_NAME = "Item 7 Go";
+const DEFAULT_IMAGE = `${SITE_URL}/images/logo.jpg`;
 
 export default function SEO({
   title,
   description,
   canonical,
   image = DEFAULT_IMAGE,
-  type = 'website',
+  type = "website",
   structuredData,
 }) {
   const fullTitle = title
     ? `${title} — ${SITE_NAME}`
-    : `${SITE_NAME} — Fast Casual Dining on Iwo Road, Ibadan`
+    : `${SITE_NAME} — Fast Casual Dining on Iwo Road, Ibadan`;
 
-  const fullCanonical = canonical
-    ? `${SITE_URL}${canonical}`
-    : SITE_URL
+  const fullCanonical = canonical ? `${SITE_URL}${canonical}` : SITE_URL;
 
   return (
     <Helmet>
@@ -26,6 +24,12 @@ export default function SEO({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={fullCanonical} />
+
+      {/* Google Search Console Verification  */}
+      <meta
+        name="google-site-verification"
+        content="3NytdCynIBLr88xhAZvxmKeRRJC4ujD1AvvVr9jLJVc"
+      />
 
       {/* Open Graph */}
       <meta property="og:type" content={type} />
@@ -49,5 +53,5 @@ export default function SEO({
         </script>
       )}
     </Helmet>
-  )
+  );
 }
